@@ -6,7 +6,7 @@ import { fetchContactsThunk,deleteContactsThunk} from "../../redux/Contact/thunk
 
 export const ContactsList = () => {
     const dispatch = useDispatch();
-    const contacts = useSelector((state) => state.contacts.items);
+    const contacts = useSelector((state) => state.contacts.items) || []
     
     const filter = useSelector((state) => state.filter.filter); // Отримуємо фільтр з Redux
    

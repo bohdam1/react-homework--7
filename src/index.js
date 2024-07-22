@@ -11,7 +11,7 @@ import {BrowserRouter} from "react-router-dom"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/react-homework--7">
+    <BrowserRouter basename="react-homework--7">
      <Provider store={store}>
      <PersistGate loading={null} persistor={persistor}>
         <App />

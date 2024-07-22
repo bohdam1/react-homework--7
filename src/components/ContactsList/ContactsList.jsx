@@ -15,9 +15,11 @@ export const ContactsList = () => {
         dispatch(fetchContactsThunk())
     },[dispatch])
     // Фільтруємо контакти за значенням фільтра
-    const filteredContacts = contacts.filter(contact =>
+    const filteredContacts = contacts && contacts.length > 0
+    ? contacts.filter(contact =>
         contact.name.toLowerCase().includes(filter.toLowerCase())
-    );
+    )
+    : [];
 
     const handleDelete = (id) => {
         dispatch(deleteContactsThunk(id));
